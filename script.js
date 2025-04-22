@@ -32,7 +32,7 @@ filtered.forEach(pokemon => {
     col.className = "col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center";
 
     col.innerHTML = `
-    <div class="card bg-dark text-white shadow-sm" style="width: 18rem;">
+    <div class="border border-warning card bg-dark text-white shadow-sm" style="width: 18rem;">
         <img src="${pokemon.image}" class="card-img-top mx-auto mt-3" style="width: 120px;" alt="${pokemon.name}">
         <div class="card-body text-center">
         <h5 class="card-title text-capitalize">${pokemon.name}</h5>
