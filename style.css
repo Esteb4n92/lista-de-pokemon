@@ -6,13 +6,6 @@ body {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
-footer {
-    background-color: #1f1f1f;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto;
-}
 body{
     background-image: url(https://assets.pokemon.com//assets/cms2-es-es/img/misc/virtual-backgrounds/pokemon/detective-pikachu.jpg);
     background-size: cover;
@@ -20,3 +13,11 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+footer {
+    background-color: #1f1f1f;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+

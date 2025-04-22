@@ -2,6 +2,7 @@ const cardsRow = document.getElementById("cardsRow");
 const filterDropdown = document.getElementById("filterDropdown");
 let pokemons = [];
 
+// funcion para obtener los datos de los pokemones y crear elementos de la lista
 async function getPokemonData(id) {
 const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
 const data = await res.json();
@@ -12,6 +13,7 @@ return {
 };
 }
 
+//funcion para cargar todos los pokemones
 async function loadPokemons() {
 for (let i = 1; i <= 15; i++) {
     const data = await getPokemonData(i);
@@ -23,6 +25,8 @@ for (let i = 1; i <= 15; i++) {
 renderCards("all");
 }
 
+// funcion para renderizar las imagenes en la tarjeta pokemon
+// y filtrar por nombre
 function renderCards(filter) {
 cardsRow.innerHTML = "";
 const filtered = filter === "all" ? pokemons : pokemons.filter(p => p.name === filter);
@@ -44,6 +48,7 @@ filtered.forEach(pokemon => {
 });
 }
 
+// evento para filtrar los pokemones al hacer click en el dropdown
 filterDropdown.addEventListener("click", (e) => {
 if (e.target.matches(".dropdown-item")) {
     const value = e.target.getAttribute("data-value");
