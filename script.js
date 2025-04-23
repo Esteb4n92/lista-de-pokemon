@@ -1,3 +1,4 @@
+//declaracion de variables globales
 const cardsRow = document.getElementById("cardsRow");
 const filterDropdown = document.getElementById("filterDropdown");
 let pokemons = [];
@@ -19,7 +20,7 @@ for (let i = 1; i <= 15; i++) {
     const data = await getPokemonData(i);
     pokemons.push(data);
     const li = document.createElement("li");
-    li.innerHTML = `<a class="dropdown-item" href="#" data-value="${data.name}">${data.name}</a>`;
+    li.innerHTML = `<a class="dropdown-item" data-value="${data.name}">${data.name}</a>`;
     filterDropdown.appendChild(li);
 }
 renderCards("all");
